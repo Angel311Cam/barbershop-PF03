@@ -1,0 +1,188 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111111;
+    color: #ffffff;
+}
+
+header {
+    background: #080808;
+    text-align: center;
+    padding: 30px 15px;
+    border-bottom: 2px solid #c69b52;
+}
+
+header h1 {
+    font-size: 35px;
+    letter-spacing: 4px;
+}
+
+header h1 span {
+    color: #c69b52;
+}
+
+header p {
+    color: #aaaaaa;
+    margin-top: 8px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #29231b, #111111);
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    color: #d6ad68;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #cccccc;
+}
+
+.formulario {
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+    background: #1c1c1c;
+    border: 1px solid #393027;
+    border-radius: 12px;
+}
+
+.formulario h2 {
+    color: #d6ad68;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    color: #dddddd;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    background: #292929;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 14px;
+    background: #c69b52;
+    color: #111111;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e0b96e;
+}
+
+#mensaje {
+    text-align: center;
+    margin-top: 15px;
+    color: #d6ad68;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
+
+/* Mejoras para la tabla de administración */
+table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th {
+    background: #c9a227;
+    color: black;
+}
+
+td button {
+    margin: 4px;
+    padding: 10px 14px;
+    cursor: pointer;
+    background: #c9a227;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+td button:hover {
+    background: #e5bd42;
+}
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.estadisticas p {
+    background: #292929;
+    border: 1px solid #c9a227;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+}
+
+.estadisticas strong {
+    display: block;
+    color: #c9a227;
+    font-size: 22px;
+    margin-top: 10px;
+}

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración | BarberShop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>BARBER<span>SHOP</span></h1>
+    <p>Panel de administración</p>
+</header>
+
+<main>
+    <section class="formulario">
+
+        <h2>Administrar citas</h2>
+
+        <label for="filtroFecha">Filtrar por fecha:</label>
+        <input type="date" id="filtroFecha">
+
+        <label for="filtroEstado">Filtrar por estado:</label>
+        <select id="filtroEstado" onchange="mostrarCitas(todasLasCitas)">
+            <option value="">Todos los estados</option>
+            <option value="PROGRAMADA">Programadas</option>
+            <option value="ATENDIDA">Atendidas</option>
+            <option value="CANCELADA">Canceladas</option>
+        </select>
+
+        <button onclick="cargarCitas()">Buscar</button>
+        <button onclick="mostrarTodas()">Mostrar todas</button>
+
+        <div class="estadisticas">
+            <p>Total de citas:
+                <strong id="totalCitas">0</strong>
+            </p>
+
+            <p>Citas pendientes:
+                <strong id="citasPendientes">0</strong>
+            </p>
+
+            <p>Citas atendidas:
+                <strong id="citasAtendidas">0</strong>
+            </p>
+
+            <p>Ingresos esperados:
+                <strong id="ingresosEsperados">Q0.00</strong>
+            </p>
+        </div>
+
+        <p id="mensaje"></p>
+
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Teléfono</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Precio</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+
+                <tbody id="tablaCitas"></tbody>
+            </table>
+        </div>
+
+    </section>
+</main>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

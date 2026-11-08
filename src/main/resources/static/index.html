@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop | Reservaciones</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>BARBER<span>SHOP</span></h1>
+    <p>Estilo, precisión y elegancia</p>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Reserva tu cita</h2>
+        <p>Tu estilo comienza aquí.</p>
+    </section>
+
+    <section class="formulario">
+        <h2>Agenda tu servicio</h2>
+
+        <form id="citaForm">
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" required>
+
+            <label>Teléfono</label>
+            <input type="tel" id="telefono" required>
+
+            <label>Servicio</label>
+            <select id="servicio" required>
+                <option value="">Selecciona un servicio</option>
+            </select>
+
+            <label>Fecha</label>
+            <input type="date" id="fecha" required>
+
+            <label>Hora</label>
+            <input type="time" id="hora" required>
+
+            <button type="submit">Reservar cita</button>
+        </form>
+
+        <p id="mensaje"></p>
+    </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
